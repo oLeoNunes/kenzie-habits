@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/homePage.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Nunito:wght@200&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/4d87994c52.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>HomePage</title>
+  </head>
+  <body>
+    <div class="container">
+        <div class="containerModal">
+            <div class="modalCriar">
+                <header class="headerModalCriar">
+                    <h2>Crair Hábito</h2>
+                    <button type="button" id="fecharModalCriar">X</button>
+                </header>
+                <form class="formCriarHabito">
+                    <label for="titulo">Título</label>
+                    <input required placeholder="Digitar Título" id="titulo" type="text" name="titulo">
+                    <label for="descricao">Descrição</label>
+                    <input required placeholder="Digitar Descrição" type="text" id="descricao" name="descricao">
+                    <label for="categoria">Categoria</label>
+                    <select id="categoria" name="categoria" required >
+                        <option selected disabled value="">Selecionar Categoria</option>
+                        <option value="casa" data-icon="casa">Casa</option>
+                        <option value="estudos" data-icon="estudo">Estudos</option>
+                        <option value="lazer" data-icon="lazer">Lazer</option>
+                        <option value="trabalho" data-icon="trabalho">Trabalho</option>
+                        <option value="saude" data-icon="saude">Saúde</option>
+                    </select>
+                    <button type="submit" id="submitCriar" name="submit">Inserir</button>
+                </form>
+            </div>
+
+            <div class="modalEditar">
+                <header class="headerModalEditar">
+                    <h2>Editar Hábito</h2>
+                    <button type="button" id="fecharModalEditar">X</button>
+                </header>
+                <form class="formEditarHabito">
+                    <label for="editarTitulo">Título</label>
+                    <input  placeholder="Digitar Título" id="editarTitulo" type="text" name="tituloEditar">
+                    <label for="editarDescricao">Descrição</label>
+                    <input  placeholder="Digitar Descrição" type="text" id="editarDescricao" name="descricaoEditar">
+                    <label for="editarCategoria">Categoria</label>
+                    <select id="editarCategoria" name="categoria"  >
+                        <option selected disabled value="">Selecionar Categoria</option>
+                        <option value="casa" data-icon="casa">Casa</option>
+                        <option value="estudos" data-icon="estudo">Estudos</option>
+                        <option value="lazer" data-icon="lazer">Lazer</option>
+                        <option value="trabalho" data-icon="trabalho">Trabalho</option>
+                        <option value="saude" data-icon="saude">Saúde</option>
+                    </select>
+                    <span class="spanStatus">
+                    <label for="status">Status</label>
+                    <input type="checkbox" name="status" id="status" name="checkbox">
+                    </span>
+                    <span class="spanBotoes">
+                    <button type="button" id="excluir" name="excluir">Excluir</button>
+                    <button type="submit" id="submitEditar" name="submit">Salvar Alterações</button>
+                    </span>
+                </form>
+              </div>
+
+                <div class="modalExcluir">
+                  <header class="headerExcluir">
+                    
+                    <h2>Excluir hábito</h2>
+                    <button type="button" id="fecharModalExcluir">X</button>
+                  </header>
+
+                  <div class="conteudoExcluir">
+                    <h2 class="tituloExcluir">Certeza que deseja excluir este hábito?</h2>
+                    <p class="paragrafoExcluir">Após executar essa ação não será possível desfazer</p>
+                  </div>
+
+                  <span class="spanBotoesExcluir">
+                    <button type="button" id="cancelarExcluir">Cancelar</button>
+                    <button type="button" id="confirmarExcluir">Sim, excluir este hábito</button>
+                  </span>
+
+            </div>
+            
+            <div class="modalEditarPerfil">
+              <header class="headerModalEditarPerfil">
+                <h2>Editar perfil</h2>
+                <button type="button" id="fecharModalEditarPerfil">X</button>
+              </header>
+              <form class="formEditarPerfil">
+                <label for="nomeUsuarioEditar">Nome</label>
+                <input required placeholder="Digite seu nome" id="nomeUsuarioEditar" type="text" name="nome"/>
+                <label for="urlEditar">Descrição</label>
+                <input required placeholder="Digite a URL" type="text" id="urlEditar" name="url"/>
+    
+                <button type="submit" id="submitEditarPerfil" name="submit">Salvar alterações</button>
+    
+            </div>
+          </div>
+    
+
+        <nav class="navegacao">
+            <div class="conteudoNavegacao">
+                <figure>
+                    <img src="" id="fotoDePerfil" alt="Foto de Perfil">
+                </figure>
+                <h3></h3>
+            </div>
+        </nav> 
+        <section class="section">
+          <h2>Tarefas</h2>
+          <div class="botoes">
+            <button class="botaoSemFundo" id="botaoTodos">Todos</button>
+            <button class="botaoSemFundo" id="botaoConcluidos">Concluídos</button>
+            <button class="botaoCriar">Criar</button>
+          </div>
+        </section>
+        <main>
+          <ul>
+              
+          </ul>
+      </main>
+      <script type="module" src="../scripts/homePage.js"></script>
+    </div>
+  </body>
+</html>
